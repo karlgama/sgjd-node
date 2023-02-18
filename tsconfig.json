@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "CommonJs",
     "moduleResolution": "node",
     "declaration": true,
     "removeComments": true,
@@ -26,5 +26,6 @@
       "@infra/*": ["./src/infra/*"],
       "@test/*": ["./test/*"]
     }
-  }
+  },
+  "includes": ["jest.config.ts"]
 }

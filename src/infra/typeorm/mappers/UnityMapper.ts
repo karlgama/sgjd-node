@@ -3,14 +3,7 @@ import UnityModel from '../models/UnityModel';
 
 export default class UnityMapper {
   static toEntity(model: UnityModel): Unity | PromiseLike<Unity> {
-    const entity = new Unity({
-      id: model.id,
-      code: model.code,
-      name: model.name,
-      createdAt: model.createdAt,
-      updatedAt: model.updatedAt
-    });
-
+    const entity = new Unity(model);
     return entity;
   }
 
