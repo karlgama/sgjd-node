@@ -2,7 +2,7 @@
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/jest": "^29.4.0",
-    "@types/node": "^18.11.18",
+    "@types/node": "^18.14.0",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
     "add": "^2.0.6",
@@ -35,14 +35,18 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.20.13",
+    "dotenv": "^16.0.3",
     "eslint-config-standard-with-typescript": "^26.0.0",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^5.1.4",
+    "typeorm": "^0.3.12"
   },
   "scripts": {
     "start": "ts-node src/main.ts",
-    "dev": "nodemon -e ts --inspect --transpile-only --ignore-watch node_modules src/main.ts",
-    "test": " jest --passWithNoTests",
+    "dev": "NODE_ENV=test nodemon -e ts --inspect --transpile-only --ignore-watch node_modules src/main.ts",
+    "test": "NODE_ENV=test jest --passWithNoTests",
     "build": "tsc"
   }
 }

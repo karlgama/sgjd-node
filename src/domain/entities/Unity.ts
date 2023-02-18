@@ -7,45 +7,49 @@ export interface UnityProps {
 }
 
 export default class Unity {
-  private id?: number;
-  private name: string;
-  private code: number;
-  private createdAt?: Date;
-  private updatedAt?: Date;
+  private _id?: number;
+  private _name: string;
+  private _code: number;
+  private _createdAt?: Date;
+  private _updatedAt?: Date;
 
   constructor(props: UnityProps) {
-    this.id = props.id;
-    this.name = props.name;
-    this.code = props.code;
-    this.createdAt = props.createdAt;
-    this.updatedAt = props.updatedAt;
+    this._id = props.id;
+    this._name = props.name;
+    this._code = props.code;
+    this._createdAt = props.createdAt;
+    this._updatedAt = props.updatedAt;
   }
 
-  public getId() {
-    return this.id;
+  public get id() {
+    return this._id;
   }
 
-  public getName() {
-    return this.name;
+  public set id(id: number) {
+    this._id = id;
   }
 
-  public setName(value: string) {
-    this.name = value;
+  public get name() {
+    return this._name;
   }
 
-  public getCode() {
-    return this.code;
+  public set name(value: string) {
+    this._name = value;
   }
 
-  public setCode(value: number) {
-    this.code = value;
+  public get code() {
+    return this._code;
   }
 
-  public getCreatedAt() {
-    return this.createdAt;
+  public set code(value: number) {
+    this._code = value;
   }
 
-  public getUpdatedAt() {
-    return this.updatedAt;
+  public get createdAt() {
+    return this._createdAt;
+  }
+
+  public get updatedAt() {
+    return this._updatedAt;
   }
 }
